@@ -1,5 +1,5 @@
 ./data/*.txt
-!./data/*-test-input.txt
+!data/*-test-input.txt
 
 .DS_Store
 */**/.DS_Store
