@@ -3,8 +3,8 @@ package pinkstack.day02
 import zio.ZIO.{succeed, suspend}
 import zio.test.*
 import zio.test.Assertion.equalTo
-import zio.test.junit.JUnitRunnableSpec
 import zio.test.TestAspect.{ignore, tag}
+import zio.test.junit.JUnitRunnableSpec
 
 import java.nio.file.Path
 
@@ -14,20 +14,20 @@ object RPSSpec extends JUnitRunnableSpec:
       assertZIO(
         RPS.totalScore(Path.of("./data/day02-test-input.txt"))
       )(equalTo(15))
-    } @@ tag("basic"),
+    } @@ tag("given"),
     test("Works with my input") {
       assertZIO(
         RPS.totalScore(Path.of("./data/day02-input.txt"))
-      )(equalTo(10624))
-    } @@ tag("real") @@ ignore,
+      )(equalTo(10_624))
+    } @@ tag("real"),
     test("2nd part") {
       assertZIO(
         RPS.totalScore2(Path.of("./data/day02-test-input.txt"))
       )(equalTo(12))
-    } @@ tag("basic"),
+    } @@ tag("given"),
     test("2nd part") {
       assertZIO(
         RPS.totalScore2(Path.of("./data/day02-input.txt"))
-      )(equalTo(12))
-    } @@ tag("real") @@ ignore
+      )(equalTo(14_060))
+    } @@ tag("real")
   )
