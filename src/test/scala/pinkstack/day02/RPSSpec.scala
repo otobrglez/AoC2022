@@ -8,7 +8,7 @@ import zio.test.TestAspect.{ignore, tag}
 
 import java.nio.file.Path
 
-object RPSSpec extends JUnitRunnableSpec:
+class RPSSpec extends JUnitRunnableSpec:
   def spec = suite("Day 2: Rock Paper Scissors")(
     test("Works with given example") {
       assertZIO(
