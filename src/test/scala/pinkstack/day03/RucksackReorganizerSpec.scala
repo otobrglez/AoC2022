@@ -28,6 +28,5 @@ object RucksackReorganizerSpec extends JUnitRunnableSpec:
       assertZIO(
         RucksackReorganizer.duplicatesInSecondPart(Path.of("./data/day03-input.txt"))
       )(equalTo(2620))
-    } @@ tag("given"),
-
+    } @@ tag("given")
   )
